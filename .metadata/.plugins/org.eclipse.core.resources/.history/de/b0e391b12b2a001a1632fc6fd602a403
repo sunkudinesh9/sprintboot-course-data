@@ -1,0 +1,5 @@
+package com.dinesh.springbootproject.hello;
+
+public class HelloController {
+
+}

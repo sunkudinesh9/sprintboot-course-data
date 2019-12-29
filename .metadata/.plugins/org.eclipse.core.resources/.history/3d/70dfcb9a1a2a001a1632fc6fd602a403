@@ -1,0 +1,28 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class SpringBootRestServiceApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(SpringBootRestServiceApplication.class, args);
+		Alian alian = context.getBean(Alian.class);
+		alian.setAge(24);
+		alian.setName("Dinesh");
+		alian.setOccumpationn("Software Engineer");
+		Laptop laptop = alian.getLaptop();
+		laptop.setName("Dell");
+		laptop.setRamCapacity(8);
+		laptop.setHdCpacity(2);
+		System.out.println(alian.getAge());
+		System.out.println(alian.getName());
+		System.out.println(alian.getOccumpationn());
+		System.out.println(laptop.getHdCpacity());
+		System.out.println(laptop.getName());
+		System.out.println(laptop.getRamCapacity());
+	}
+
+}

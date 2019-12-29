@@ -1,0 +1,21 @@
+package com.dinesh.springbootproject.topics;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class TopicService {
+	List<Topics> topics = Arrays.asList(new Topics("Java", "Core Java", "This is java tutorial"),
+			new Topics("python", "core Python", "This is Python tutorial"),
+			new Topics("JavaScript", "Node.js", "This is JavaScript tutorial"));
+
+	public List<Topics> getAllTopics() {
+		return topics;
+	}
+
+	public Topics getTopic(String id) {
+		return topics.stream().filter(t -> t.getId().equalsIgnoreCase(id)).findFirst().get();
+	}
+}

@@ -1,0 +1,13 @@
+package com.dinesh.springbootcoursedata;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringbootCourseDataApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringbootCourseDataApplication.class, args);
+	}
+
+}
